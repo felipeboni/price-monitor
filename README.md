@@ -1,5 +1,9 @@
 # price-monitoring [![NPM Version](https://img.shields.io/npm/v/price-monitoring.svg)](https://www.npmjs.com/package/price-monitoring) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+```text
+NOTE: This repository uses the deprecated repository [price-monitoring](https://www.npmjs.com/package/price-monitoring) as a base.
+```
+
 Node.js price monitoring library, leveraging the power of x-ray and nightmare.
 
 ## Features
@@ -236,14 +240,10 @@ p.addProduct({
 
 ```
 
-
-## Notes
-
-Still in Beta
-
 ## Author
 
-Rocco Musolino
+Rocco Musolino (Original author)
+Felipe Boni
 
 ## License
 
