@@ -32,6 +32,7 @@
     "lodash": "^4.17.4",
     "price-monitoring": "^1.0.9",
     "telegraf": "^4.11.2",
+    "turl": "^1.1.2",
     "x-ray": "^2.3.2",
     "x-ray-nightmare": "^0.1.3"
   },

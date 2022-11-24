@@ -6,7 +6,8 @@ class neifanTESTE extends SiteParser {
   constructor () {
     super(
       'https://neifanpratas.com.br/', // base url
-      '.price ins .amount bdi@text | slice:2 | replaceComma | float' // price selector
+      '.summary .price .amount bdi@text | slice:2 | replaceComma', // price selector
+      '.woocommerce-product-gallery__wrapper img@src' // image selector
     )
   }
 }
