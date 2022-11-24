@@ -3,15 +3,15 @@ var path = require('path')
 var PriceMonitoring = require('../index')
 
 var pm = new PriceMonitoring({
-  parsersDir: path.join(__dirname, 'myParsers/'), // add parsers
-  interval: 60 * 1000 // every min
+  parsersDir: path.join(__dirname, 'parsers/'), // add parsers
+  interval: 5000 // every min
 })
 
 /* get general info */
 console.log('N. of Parsers loaded', pm.getParsersCount())
 
 /* parse Products from CSV */
-var fileInput = path.join(__dirname, 'input.csv')
+var fileInput = path.join(__dirname, 'products.csv')
 
 /* First instatiate the listeners */
 pm.on('error', console.log)

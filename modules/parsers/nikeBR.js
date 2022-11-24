@@ -2,22 +2,22 @@
 const SiteParser = require('../../lib/PriceMonitoring').SiteParser
 
 /* Class */
-class Ikea extends SiteParser {
+class nikeBR extends SiteParser {
   constructor () {
     super(
-      'https://www.ikea.com', // base url
-      '#prodPrice .packagePrice@html | trim | split:"&#xA0;",1 | replaceComma | float' // price selector
+      'https://www.nike.com.br', // base url
+      '[aria-label="preço antigo"], [data-testid="pricebox"] @html | trim | split:" ",1 | replaceComma | float' // price selector
     )
   }
 }
 
-module.exports = Ikea
+module.exports = nikeBR
 
 /* Single Example */
 if (!module.parent) {
-  console.log('Ikea example running...')
+  console.log('nikeBR example running...')
 
-  var p = new Ikea()
+  var p = new nikeBR()
 
   p.on('error', console.log)
   p.on('submit', console.log)
@@ -32,12 +32,10 @@ if (!module.parent) {
     p.close() // shutdown driver
   })
 
-  p
-  .addProduct({
-    name: 'BJURSTA',
-    link: 'http://www.ikea.com/it/it/catalog/products/50116847/',
-    price: 89.99,
-    variation: 15
-  })
-  .fetchPrices()
+  p.addProduct({
+    name: 'Chinelo Nike Asuna 2 Masculino',
+    link: 'https://www.nike.com.br/chinelo-nike-asuna-2-masculino-012744.html',
+    price: 299.99,
+    variation: 18
+  }).fetchPrices()
 }
